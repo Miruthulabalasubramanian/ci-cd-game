@@ -7,10 +7,12 @@ pipeline {
 
     stages {
 
-        stage('Clone Repo') {
-            steps {
-                git 'https://github.com/satheeshm5465-aws/ci-cd-game'
-            }
+stage('Clone Repo') {
+    steps {
+        git branch: 'main', url: 'https://github.com/satheeshm5465-aws/ci-cd-game'
+    }
+}
+
         }
 
         stage('Terraform Init') {
